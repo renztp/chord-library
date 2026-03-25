@@ -8,6 +8,25 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor() { }
+
+  chords: { id: number, tabName: string }[] = [
+    {
+      id: 0,
+      tabName: 'C#',
+    },
+    {
+      id: 1,
+      tabName: 'A',
+    },
+    {
+      id: 2,
+      tabName: 'BM7',
+    },
+    {
+      id: 3,
+      tabName: 'D#m7',
+    },
+  ]
 
 }

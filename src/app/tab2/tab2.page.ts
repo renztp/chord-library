@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-tab2',
@@ -8,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  newTabForm = new FormGroup({
+    tabName: new FormControl('', { nonNullable: true, validators: [Validators.required] }),
+    key: new FormControl('', { nonNullable: true }),
+    photo: new FormControl<File | null>(null, [Validators.required])
+  });
 
+  onSubmit() {
+    console.log(this.newTabForm.value)
+  }
+
+  constructor() { }
 }
