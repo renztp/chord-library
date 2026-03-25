@@ -1,0 +1,7 @@
+{
+  "name": "chord-library",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
