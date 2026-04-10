@@ -6,7 +6,9 @@ import { CategoryModule } from './category/category.module';
 import { ChordModule } from './chord/chord.module';
 
 @Module({
-  imports: [ConfigModule.forRoot(), CategoryModule, ChordModule],
+  imports: [ConfigModule.forRoot({
+    isGlobal: true
+  }), CategoryModule, ChordModule],
   controllers: [AppController],
   providers: [AppService],
 })

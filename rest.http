@@ -4,3 +4,9 @@
 
 GET {{baseurl}}/category HTTP/1.1
 Accept: application/json
+
+
+###
+
+GET {{baseurl}}/chord HTTP/1.1
+Accept: application/json
