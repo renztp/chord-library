@@ -1,14 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { ChordsService } from '../services/chords/chords.service';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
-  standalone: false,
+  standalone: false
 })
 export class Tab1Page {
 
-  constructor() { }
+  count = signal(0);
+  chordName: string;
+
+  incrementCount() {
+    this.count.update(count => count + 1);
+  }
+
+  constructor(private chordService: ChordsService) {
+    this.chordName = this.chordService.name("C#");
+    console.log(this.chordName);
+  }
 
   chords: { id: number, tabName: string }[] = [
     {
@@ -28,5 +39,4 @@ export class Tab1Page {
       tabName: 'D#m7',
     },
   ]
-
 }

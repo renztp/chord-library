@@ -1,0 +1,6 @@
+###
+
+@baseurl = http://localhost:3000
+
+GET {{baseurl}}/category HTTP/1.1
+Accept: application/json

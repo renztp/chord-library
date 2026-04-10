@@ -13,13 +13,21 @@
   <!--   </ion-toolbar> -->
   <!-- </ion-header> -->
 
-  <ion-card>
-    <ion-grid>
-    @for (chord of chords; track chord.id) {
-      <ion-row>{{chord.tabName}}</ion-row>
-    }
-    </ion-grid>
-  </ion-card>
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>First Accordion</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        yo wattup
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label>Second Accordion</ion-label>
+      </ion-item>
+    </ion-accordion>
+  </ion-accordion-group>
 
 
   <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
