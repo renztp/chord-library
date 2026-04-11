@@ -1,0 +1,40 @@
+name: Technical Task
+description: Create a structured issue for development tasks.
+title: "[TASK]: "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      placeholder: What needs to be done?
+    validations:
+      required: true
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Level of Complexity
+      options:
+        - Low (Quick fix/Small task)
+        - Medium (Requires significant logic changes)
+        - High (Major feature or complex refactor)
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Project Area
+      options:
+        - Frontend
+        - Backend
+        - Testing
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: Technical Details
+      description: List any specific endpoints, components, or logic that need attention.
+      placeholder: |
+        - Endpoint: /api/v1/users
+        - Component: UserProfileCard.tsx

@@ -57,4 +57,5 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 /backend/node_modules
 /backend/.env
+todos.md
 secrets.json
