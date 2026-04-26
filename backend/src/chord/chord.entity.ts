@@ -1,4 +1,4 @@
-import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm'
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
 export class Chord {
@@ -6,5 +6,8 @@ export class Chord {
   id: number;
 
   @Column()
+  readableName: string;
 
+  @Column()
+  name: string;
 }
