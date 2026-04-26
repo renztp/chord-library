@@ -1,19 +1,20 @@
-import { IonicModule } from '@ionic/angular';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { IonicModule } from '@ionic/angular';
+import { ChordItemModule } from "../components/chord-item/chord-item.module";
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-import { Tab1Page } from './tab1.page';
-import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { ChordsService } from '../services/chords/chords.service';
-
+import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { Tab1Page } from './tab1.page';
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    ChordItemModule
   ],
   declarations: [Tab1Page],
   providers: [ChordsService]

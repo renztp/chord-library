@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="settings-content">
+  <ion-list>
+    <ion-item>
+      <ion-label>Light Mode</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="lightMode"></ion-toggle>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>
+        Current theme: <strong>{{ themeLabel }}</strong>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

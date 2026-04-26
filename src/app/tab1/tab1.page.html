@@ -7,19 +7,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense"> -->
-  <!--   <ion-toolbar> -->
-  <!--     <ion-title size="large">Tab 1</ion-title> -->
-  <!--   </ion-toolbar> -->
-  <!-- </ion-header> -->
-
   <ion-accordion-group>
     <ion-accordion value="first">
       <ion-item slot="header" color="light">
         <ion-label>First Accordion</ion-label>
       </ion-item>
       <div class="ion-padding" slot="content">
-        yo wattup
+        @for(chord of chords; track chord.id) {
+        <app-chord-item [chordId]="chord.id" [chordName]="chord.chordName"
+                        [chordImage]="chord.chordImage"></app-chord-item>
+        }
       </div>
     </ion-accordion>
     <ion-accordion value="second">

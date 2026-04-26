@@ -1,0 +1,16 @@
+<div class="chord-item">
+  <img [src]="chordImage" alt="Chord diagram for {{ chordName }}" class="chord-image" />
+
+  <div class="chord-footer">
+    <div class="chord-name">{{ chordName }}</div>
+
+    <div class="chord-controls">
+      <button class="control-btn edit-btn" (click)="onEdit()" aria-label="Edit {{ chordName }}">
+        <ion-icon name="pencil"></ion-icon>
+      </button>
+      <button class="control-btn delete-btn" (click)="onDelete()" aria-label="Delete {{ chordName }}">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+    </div>
+  </div>
+</div>

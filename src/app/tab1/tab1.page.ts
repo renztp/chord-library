@@ -21,22 +21,26 @@ export class Tab1Page {
     console.log(this.chordName);
   }
 
-  chords: { id: number, tabName: string }[] = [
+  chords: { id: number, chordName: string, chordImage: string; }[] = [
     {
       id: 0,
-      tabName: 'C#',
+      chordName: 'C#',
+      chordImage: 'yo',
     },
     {
       id: 1,
-      tabName: 'A',
+      chordName: 'A',
+      chordImage: 'yo',
     },
     {
       id: 2,
-      tabName: 'BM7',
+      chordName: 'BM7',
+      chordImage: 'yo',
     },
     {
       id: 3,
-      tabName: 'D#m7',
+      chordName: 'D#m7',
+      chordImage: 'yo',
     },
-  ]
+  ];
 }
