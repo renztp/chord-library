@@ -10,14 +10,21 @@ export const databaseProviders = [
         port: 5431,
         username: 'postgres',
         password: 'postgres',
-        database: 'chordlibrary',
+        database: 'chord_library_db',
         entities: [
           __dirname + '/../**/*.entity{.ts,.js}',
         ],
         synchronize: true,
       });
 
-      return dataSource.initialize();
+      try {
+        if (!dataSource.isInitialized) {
+          await dataSource.initialize();
+        }
+      } catch (error) {
+        console.error(error);
+      }
+      return dataSource;
     },
   },
 ];

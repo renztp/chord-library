@@ -16,7 +16,7 @@ export class Tab2Page {
   });
 
   onSubmit() {
-    console.log(this.newTabForm.value)
+    console.log(this.newTabForm.value);
   }
 
   constructor() { }

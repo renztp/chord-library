@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ChordItemModule } from "../components/chord-item/chord-item.module";
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { HeaderModule } from "../components/header/header.module";
 import { ChordsService } from '../services/chords/chords.service';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { Tab1Page } from './tab1.page';
@@ -12,9 +12,9 @@ import { Tab1Page } from './tab1.page';
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
     Tab1PageRoutingModule,
-    ChordItemModule
+    ChordItemModule,
+    HeaderModule
   ],
   declarations: [Tab1Page],
   providers: [ChordsService]
